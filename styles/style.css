@@ -86,28 +86,14 @@ ol {
 
 .search-form__fieldset {
   border: none;
-  flex: 1 1 0;
-}
-
-.search-form__fieldset:first-child {
-  inline-size: 225px;
-  block-size: 48px;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   row-gap: 7px;
-  align-self: flex-end;
 }
 
 .search-form__fieldset:nth-child(2) {
-  block-size: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-self: flex-end;
   margin-left: 6px;
-  margin-bottom: 4px;
-  row-gap: 7px;
 }
 
 .search-form__label-text {
@@ -144,13 +130,6 @@ ol {
   align-self: flex-end;
   inline-size: 194px;
   block-size: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
   margin-left: 6px;
 }
 
@@ -213,6 +192,9 @@ ol {
   background-color: transparent;
   color: inherit;
   font: inherit;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -228,13 +210,8 @@ ol {
 .button:active {
   background-color: #545050;
 }
-
 .button:hover {
   text-decoration: underline;
-}
-
-.button:active {
-  background-color: #545050;
 }
 
 .more-button {
@@ -315,6 +292,7 @@ ol {
 
 .content__video-card-description-container {
   flex: 1 1 auto;
+  min-inline-size: 0;
 }
 
 .content__video-card-title {
@@ -324,6 +302,10 @@ ol {
   line-height: 1;
   text-transform: uppercase;
   margin-block-end: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .content__video-card-description {
